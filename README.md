@@ -21,7 +21,7 @@ This Currency Converter is a simple Command Line Interface (CLI) application tha
    ```
 2. Navigate to the project directory:
    ```bash
-   cd currency-converter-cli
+   cd currency-converter-cli/CurrencyConverter
    ```
 3. Copy the file named 'appsettings.json.example' in the project directory:
    ```bash

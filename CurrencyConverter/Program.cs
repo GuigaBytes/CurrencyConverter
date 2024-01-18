@@ -2,7 +2,7 @@
 
 namespace CurrencyConverter
 {
-    class Program
+    public class Program
     {
         static async Task Main(string[] args)
         {
@@ -28,7 +28,7 @@ namespace CurrencyConverter
             }
         }
 
-        private static bool ValidateArgs(string[] args)
+        public static bool ValidateArgs(string[] args)
         {
             if (args.Length < 2 || args.Length > 3)
             {
