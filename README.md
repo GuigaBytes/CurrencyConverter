@@ -21,13 +21,13 @@ This Currency Converter is a simple Command Line Interface (CLI) application tha
    ```
 2. Navigate to the project directory:
    ```bash
-   cd currency-converter-cli
+   cd currency-converter-cli/CurrencyConverter
    ```
-3. Create a file named `appsettings.json` in the project directory and add the following code:
+3. Copy the file named 'appsettings.json.example' in the project directory:
    ```bash
    cp appsettings.json.example appsettings.json
    ```
-4. Open appsettings.json and insert your API key from ExchangeRate-API.
+4. Open 'appsettings.json' and insert your API key from ExchangeRate-API.
 5. Build the project:
    ```bash
    dotnet build
@@ -38,8 +38,16 @@ Run the application with the following command format:
 ```bash
 dotnet run <amount> <from> <to>
 ```
+Or
+```bash
+dotnet run <from> <to>
+```
 
 ### Example:
 ```bash
 dotnet run 100 USD EUR
+```
+Or:
+```bash
+dotnet run USD EUR
 ```
