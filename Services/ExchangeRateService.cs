@@ -21,7 +21,7 @@ namespace CurrencyConverter.Services
             var result = JsonConvert.DeserializeObject<ExchangeRateResponse>(content) ?? throw new Exception("Failed to deserialize response");
             decimal rate = result.ConversionRate;
 
-            Console.WriteLine($"Current conversion rate: 1 {from} = {rate} {to}");
+            Console.WriteLine($"[RATE]: 1 {from} = {rate} {to}\n");
 
             return amount * rate;
         }
