@@ -22,10 +22,7 @@ namespace CurrencyConverter
 
             decimal convertedAmount = await ExchangeRateService.ConvertCurrency(fromCurrency, toCurrency, amount);
             
-            if (amount > 1)
-            {
-                Console.WriteLine($"[RESULT]: {amount} {fromCurrency} = {convertedAmount} {toCurrency}\n");
-            }
+            Console.WriteLine($"[RESULT]: {amount} {fromCurrency} = {convertedAmount} {toCurrency}\n");
         }
 
         public static bool ValidateArgs(string[] args)
@@ -48,7 +45,7 @@ namespace CurrencyConverter
             return true;
         }
 
-        private static bool IsCurrencyCodeValid(string code)
+        public static bool IsCurrencyCodeValid(string code)
         {
             return code.Length == 3 && code.All(char.IsLetter);
         }

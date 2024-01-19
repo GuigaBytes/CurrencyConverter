@@ -8,6 +8,13 @@ namespace CurrencyConverter.Services
     {
         public static async Task<decimal> ConvertCurrency(string from, string to, decimal amount)
         {
+            decimal rate = await ExchangeRateService.GetCurrencyRate(from, to);
+
+            return amount * rate;
+        }
+
+        public static async Task<decimal> GetCurrencyRate(string from, string to)
+        {
             ConfigurationManager configManager = new ConfigurationManager();
             string apiKey = configManager.GetConfigurationValue("ApiKey");
 
@@ -21,9 +28,7 @@ namespace CurrencyConverter.Services
             var result = JsonConvert.DeserializeObject<ExchangeRateResponse>(content) ?? throw new Exception("Failed to deserialize response");
             decimal rate = result.ConversionRate;
 
-            Console.WriteLine($"[RATE]: 1 {from} = {rate} {to}\n");
-
-            return amount * rate;
+            return rate;
         }
     }
 }

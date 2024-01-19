@@ -17,11 +17,11 @@ This Currency Converter is a simple Command Line Interface (CLI) application tha
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/GuigaBytes/currency-converter-cli.git
+   git clone https://github.com/GuigaBytes/CurrencyConverter.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd currency-converter-cli/CurrencyConverter
+   cd CurrencyConverter/CurrencyConverter
    ```
 3. Copy the file named 'appsettings.json.example' in the project directory:
    ```bash
@@ -50,4 +50,9 @@ dotnet run 100 USD EUR
 Or:
 ```bash
 dotnet run USD EUR
+```
+
+### Testing
+```bash
+dotnet test
 ```
