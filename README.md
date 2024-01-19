@@ -51,3 +51,8 @@ Or:
 ```bash
 dotnet run USD EUR
 ```
+
+### Testing
+```bash
+dotnet test
+```
