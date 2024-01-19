@@ -45,7 +45,7 @@ namespace CurrencyConverter
             return true;
         }
 
-        private static bool IsCurrencyCodeValid(string code)
+        public static bool IsCurrencyCodeValid(string code)
         {
             return code.Length == 3 && code.All(char.IsLetter);
         }
